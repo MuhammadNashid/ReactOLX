@@ -13,7 +13,7 @@ app.use('/api', Router);
 
 connection().then(() => {
     app.listen(process.env.PORT, () => {
-        console.log(`server started at http://localhost:${process.env.PORT    }`);
+        console.log(`server started at http://localhost:${process.env.PORT }`);
         
     });
 }).catch((error) => {
