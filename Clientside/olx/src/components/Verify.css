@@ -1,0 +1,42 @@
+.email{
+    width: 450px;
+    height: 170px;
+    margin-left: 500px;
+    margin-top: 100px;
+    border: 1px solid rgb(212, 210, 210);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+.infor{
+    width: 400px;
+    height: 30px;
+    margin-top: 20px;
+   margin-left: 20px;
+    outline: none;
+
+}
+.btnv{
+    margin-top: 30px;
+    margin-left: 160px;
+    background-color: rgb(103, 103, 185);
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.form6-group{
+    width: 350px;
+}
+.vcls{
+    color: white;
+    text-decoration: none;
+}
+.h2{
+    color:rgb(14, 14, 128);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+  

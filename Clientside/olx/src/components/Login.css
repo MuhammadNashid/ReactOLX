@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+   
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Page Styling */
+  .login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    color: #fff;
+  }
+  
+  /* Container */
+  .login-container {
+    width: 350px;
+    background-color: #fff;
+    /* padding: 30px; */
+    height: 450px;
+    border-radius: 5px;
+    border: 1px solid rgb(212, 210, 210);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    color: #333;
+    margin-top: -140px;
+  }
+  
+  /* Header */
+  .login-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-header h1 {
+    margin-top: 40px;
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .login-header p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Form */
+.form-group {
+    margin-left: 20px;
+    width: 300px;
+  } 
+  
+  .in1{
+    width: 300px;
+    height: 40px;
+    margin-left: 20px;
+    outline: none;
+    border: 1px solid rgb(224, 222, 222);
+    border-radius: 2px;
+    margin-top: 10px;
+  }
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    color: gray;
+  }
+  /* Button */
+  .btn-login {
+    width: 300px;
+    height: 35px;
+    background-color: #53bdeb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 20px;
+   font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Footer Links */
+  .form-footer {
+    margin-top: 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .form-footer a {
+    color:  #144d37;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 0 5px;
+  }
+  
+  .form-footer a:hover {
+    text-decoration: underline;
+   
+  }
+  
+  .separator {
+    color: #ccc;
+  }
+  .und{
+    width: 350px;
+    height: 50px;
+    padding: 15px 10px;
+    margin-top: 390px;
+    margin-left: -350px;
+    background-color: white;
+    border: 1px solid rgb(212, 210, 210);
+    border-radius: 5px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  .sp{
+    color: black;
+    margin-top: 10px;
+  }
+  .signup-link{
+    margin-left: 50px;
+    margin-top: 200px;
+    color: #007bfc;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .or{
+    margin-top: 40px;
+    margin-left: 55px;
+    color: #9b9e9e;
+  }

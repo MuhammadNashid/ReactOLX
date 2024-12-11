@@ -1,0 +1,119 @@
+/* Basic Navbar styling */
+.navbar {
+    background-color:#c2ecec; /* OLX brand color */
+    /* padding: 10px 20px; */
+    position: sticky;
+    /* top: 0; */
+    /* z-index: 10; */
+    /* margin-top: -10px; */
+    /* margin-left: -9px;
+    margin-right: -9px; */
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .loca {
+    width: 200px;
+    padding: 10px;
+    border-radius: 2px;
+    border:2px solid rgb(12, 12, 12);
+    font-size: 16px;
+    outline: none;
+    margin-left: -98px;
+  }
+  img{
+    width: 40px;
+    height: 40px;
+  }
+  /* .img{
+    background-color: black;
+    width: 50px;
+    border-radius: 5px;
+    height: 40px;
+    margin-left: 700px;
+    margin-top: -20px;
+  } */
+  .search-input {
+    width: 750px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 2px;
+    font-size: 16px;
+    outline: none;
+    margin-left:  50px;
+  }
+  
+  .search-input::placeholder {
+    color: #999;
+  }
+  .cont{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-right: -110px;
+  }
+ .eng{
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color:#e4e6e6;
+  
+ } 
+ .engs{
+    width: 100px;
+    height: 30px;
+     border: none;
+    background-color: #e4e6e6;
+    font-weight: bold;
+    font-size: 15px;
+ } 
+ .lod{
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 8px;
+ }
+ .sell{
+    width: 90px;
+    height: 40px;
+    border-radius: 100px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid rgb(27, 105, 27);
+ }
+ .plu{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 5px;
+ }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .search-bar {
+      margin-top: 10px;
+      width: 100%;
+    }
+  
+    .navbar-links {
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+  
+    .sell-btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
