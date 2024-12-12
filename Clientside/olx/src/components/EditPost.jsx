@@ -20,7 +20,7 @@ const EditPost = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await axios.get(`http://localhost:3005/api/getPost/${id}`, {
+        const res = await axios.get(`http://localhost:3009/api/getPost/${id}`, {
             headers: { Authorization: `Bearer ${token}` },
           })
           
@@ -70,7 +70,7 @@ const EditPost = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const response = await axios.put(`http://localhost:3005/api/updatePost/${id}`, formData, {
+        const response = await axios.put(`http://localhost:3009/api/updatePost/${id}`, formData, {
             headers: { Authorization: `Bearer ${token}` },
         });
       

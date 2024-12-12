@@ -1,119 +1,164 @@
-/* Basic Navbar styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .navbar {
-    background-color:#c2ecec; /* OLX brand color */
-    /* padding: 10px 20px; */
-    position: sticky;
-    /* top: 0; */
-    /* z-index: 10; */
-    /* margin-top: -10px; */
-    /* margin-left: -9px;
-    margin-right: -9px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #cbd8d6;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.loca {
+  border: 3px solid #111111;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 250px;
+  height: 50px;
+  margin-left: 130px;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 20px;
+}
+
+.search-input {
+  flex: 1;
+ height: 50px;
+  border: 3px solid #111111;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: -280px;
+}
+
+.search-button {
+  background-color: #002f34;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.engs{
+  width: 90px;
+  height: 50px;
+  border: 1px solid  #cbd8d6;
+  background-color:  #cbd8d6;
+  margin-right: 10px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.lang-button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.icon {
+  font-size: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.profile-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.sell-button {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #002f34;
+  background-color: white;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  padding: 5px;
+}
+
+/* .dropbtn:hover {
+  transform: rotate(180deg);
+} */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .loca {
-    width: 200px;
-    padding: 10px;
-    border-radius: 2px;
-    border:2px solid rgb(12, 12, 12);
-    font-size: 16px;
-    outline: none;
-    margin-left: -98px;
-  }
-  img{
-    width: 40px;
-    height: 40px;
-  }
-  /* .img{
-    background-color: black;
-    width: 50px;
-    border-radius: 5px;
-    height: 40px;
-    margin-left: 700px;
-    margin-top: -20px;
-  } */
-  .search-input {
-    width: 750px;
-    height: 40px;
-    margin-top: 10px;
-    border-radius: 2px;
-    font-size: 16px;
-    outline: none;
-    margin-left:  50px;
-  }
-  
-  .search-input::placeholder {
-    color: #999;
-  }
-  .cont{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin-right: -110px;
-  }
- .eng{
-    width: 100px;
-    height: 30px;
-    border: none;
-    background-color:#e4e6e6;
-  
- } 
- .engs{
-    width: 100px;
-    height: 30px;
-     border: none;
-    background-color: #e4e6e6;
-    font-weight: bold;
-    font-size: 15px;
- } 
- .lod{
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: underline;
-    font-family: 'Courier New', Courier, monospace;
-    margin-top: 8px;
- }
- .sell{
-    width: 90px;
-    height: 40px;
-    border-radius: 100px;
-    font-weight: bold;
-    text-align: center;
-    border: 1px solid rgb(27, 105, 27);
- }
- .plu{
-    font-size: 20px;
-    font-weight: bold;
-    margin-right: 5px;
- }
-  
-  /* Media Queries for responsiveness */
-  @media (max-width: 768px) {
-    .navbar-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .search-bar {
-      margin-top: 10px;
-      width: 100%;
-    }
-  
-    .navbar-links {
-      width: 100%;
-      justify-content: space-between;
-      margin-top: 10px;
-    }
-  
-    .sell-btn {
-      width: 100%;
-      margin-top: 10px;
-    }
-  }
+}

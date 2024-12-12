@@ -12,7 +12,7 @@ const Home = ({setUser}) => {
       navigate("/login")
     } else {
       try {
-        const res = await axios.get("http://localhost:4000/api/getuser", {
+        const res = await axios.get("http://localhost:3009/api/getuser", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.status === 200) {
@@ -30,7 +30,7 @@ const Home = ({setUser}) => {
 
   const getPosts = async () => {
     try {
-      const res = await axios.get("http://localhost:3005/api/getAllPosts", {
+      const res = await axios.get("http://localhost:3009/api/getAllPosts", {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (res.status === 200) {

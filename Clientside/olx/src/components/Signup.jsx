@@ -23,7 +23,7 @@ const Signup = () => {
     console.log(formData);
     
     try {
-      const res=await axios.post("http://localhost:3005/api/adduser",formData)
+      const res=await axios.post("http://localhost:3009/api/adduser",formData)
       if (res.status === 201) {
         alert(res.data.msg);
         localStorage.removeItem("email");

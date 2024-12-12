@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 import './Nav.css'
 
 
-const Nav = ({user}) => {
+const Nav = ({user,setFilter}) => {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false)
   const navigate = useNavigate()
 
@@ -30,33 +30,39 @@ const Nav = ({user}) => {
     alert("Logout Successfully")
     navigate("/login")
   }
+
   return (
     <nav className="navbar">
-      <div className="navbar-container">
-      <div className="search1-bar">
-           <select className="loca">     
-            <option value="india">INDIA</option>         
-            <option value="usa">USA</option>
+      {/* Left Section */}
+      <div className="nav-left">
+        {/* <img src={logo} alt="Logo" className="logo" /> */}
+        <select className="loca">
+          <option value="india">India</option>
+          <option value="usa">USA</option>
           <option value="uk">UK</option>
-         </select>
-        </div>
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Find Cars, Mobiles and more..."
-            className="search-input"
-          />
-          
-        </div>
-        
-        <div className="cont">
+        </select>
+      </div>
+
+      {/* Center Section */}
+      <div className="nav-center">
+        <input
+          type="text"
+          className="search-input"
+          placeholder="Find Cars, Mobile Phones and more..."
+          onChange={(e) => setFilter(e.target.value)}
+        />
+
+      </div>
+
+      {/* Right Section */}
+      <div className="nav-right">
         <div className="eng">  
         <select className="engs">
             <option value="">ENGLISH</option>
             <option value="">हिन्दी</option>
         </select>
         </div>
-       
+
         <div className="profile-icon"></div>
         <div className="dropdown">
           <button onClick={toggleDropdown} className="dropbtn">{user}</button>
@@ -69,9 +75,11 @@ const Nav = ({user}) => {
             </div>
           )}
         </div>
-      <button className="sell"><Link><span className="plu">+</span>SELL</Link></button>
-   </div>
-       
+        <Link to={"/sell"}>
+        <button className="sell-button">
+      + SELL
+    </button>
+    </Link>
       </div>
     </nav>
   );

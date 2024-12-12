@@ -41,7 +41,7 @@ const Sell= () => {
     e.preventDefault()
     
     try {
-        const res= await axios.post("http://localhost:3005/api/addPost", formData, {
+        const res= await axios.post("http://localhost:3009/api/addPost", formData, {
             headers: { Authorization: `Bearer ${token}` },
           });
 

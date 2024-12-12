@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
-import "./ViewPost.css";
+import "./ViewuserPost.css";
 
-const ViewPost = () => {
+const ViewuserPost = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [post, setPost] = useState(null);
@@ -27,6 +27,9 @@ const ViewPost = () => {
   };
 
   const deletePost = async () => {
+    const confirmDelete = window.confirm("Are you sure you want to delete this post?");
+    if (!confirmDelete) return;
+  
     try {
       const res = await axios.delete(`http://localhost:3009/api/deletePost/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
@@ -42,6 +45,7 @@ const ViewPost = () => {
       alert("An error occurred. Try again.");
     }
   };
+  
 
   useEffect(() => {
     fetchPost();
@@ -51,6 +55,7 @@ const ViewPost = () => {
 
   return (
     <div className="view-post-container">
+      <h2>Details post</h2>
       <div className="post-details">
         <div className="post-images">
           {post.images.map((image, index) => (
@@ -63,24 +68,29 @@ const ViewPost = () => {
           ))}
         </div>
         <div className="post-info">
-          <h3>title: {post.title}</h3>
-          <p>category: {post.category}</p>
-          <p>description: {post.description}</p>
+          <div className="left-info">
+          <h3>title: {post.title}</h3> <br />
+          <p>category: {post.category}</p> <br />
+          <p>description: {post.description}</p> <br />
           <p>price: ₹ {post.price}</p>
+          </div>
+          <div className="right-info">
           <p>
             <strong>Date:</strong> {post.date}
           </p>
+          <br />
           <p>
             <strong>Time:</strong> {post.time}
           </p>
+          </div>
         </div>
       </div>
       <div className="post-actions">
-        <button onClick={() => navigate(`/editPost/${id}`)}>Edit</button>
-        <button className="db" onClick={deletePost}>Delete</button>
+        <button className="edit-post-btn" onClick={() => navigate(`/editPost/${id}`)}>Edit</button>
+        <button className="delete-post-btn" onClick={deletePost}>Delete</button>
       </div>
     </div>
   );
 };
 
-export default ViewPost
+export default ViewuserPost

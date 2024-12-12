@@ -44,7 +44,7 @@ const Adduser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const response = await axios.post(`http://localhost:3005/api/adduserData`, formData, {
+        const response = await axios.post(`http://localhost:3009/api/adduserData`, formData, {
             headers: { Authorization: `Bearer ${token}` },
         });
 

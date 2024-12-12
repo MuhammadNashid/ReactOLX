@@ -20,7 +20,7 @@ const Edituser = () => {
     }
 
     try {
-      const res = await axios.get("http://localhost:3005/api/getuserData", {
+      const res = await axios.get("http://localhost:3009/api/getuserData", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -64,7 +64,7 @@ const Edituser = () => {
 
     try {
       const res = await axios.put(
-        "http://localhost:3005/api/edituserData",{ ...formData },
+        "http://localhost:3009/api/edituserData",{ ...formData },
         {headers: { Authorization: `Bearer ${token}` },}
       );
 
