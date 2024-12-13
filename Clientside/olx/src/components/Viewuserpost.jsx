@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
-import "./ViewuserPost.css";
+import "./Viewuserpost.css";
 
 const ViewuserPost = () => {
   const { id } = useParams();

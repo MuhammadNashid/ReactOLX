@@ -10,6 +10,7 @@ import EditPost from "./components/EditPost"
 import Edituser from "./components/Edituser"
 import Profile from "./components/Profile"
 import ViewPost from "./components/ViewPost"
+import Viewuserpost from "./components/Viewuserpost"
 import { useState } from "react"
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
     <Route path="/edituser" element={<Edituser />}></Route>
     <Route path="/sell" element={<Sell />}></Route>
     <Route path="/viewPost/:id" element={<ViewPost />}></Route>
+    <Route path="/viewuserpost/:id" element={<Viewuserpost />}></Route>
     <Route path="/editPost/:id" element={<EditPost />}></Route>
     </Routes>
     </BrowserRouter>

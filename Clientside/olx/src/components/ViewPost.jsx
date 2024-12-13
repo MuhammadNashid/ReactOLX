@@ -24,24 +24,7 @@ const ViewPost = () => {
       console.error(error);
       navigate("/profile");
     }
-  };
-
-  const deletePost = async () => {
-    try {
-      const res = await axios.delete(`http://localhost:3009/api/deletePost/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      if (res.status === 200) {
-        alert(res.data.msg);
-        navigate("/profile");
-      } else {
-        alert("Failed to delete post.");
-      }
-    } catch (error) {
-      console.error(error);
-      alert("An error occurred. Try again.");
-    }
-  };
+  }
 
   useEffect(() => {
     fetchPost();
@@ -50,34 +33,36 @@ const ViewPost = () => {
   if (!post) return <div>Loading...</div>;
 
   return (
-    <div className="view-post-container">
-      <div className="post-details">
-        <div className="post-images">
+    <div className="view">
+      {/* <h2>Post Details</h2> */}
+      <div className="postd">
+        <div className="pimages">
           {post.images.map((image, index) => (
             <img
               key={index}
               src={image}
               alt={`Post Image ${index + 1}`}
-              className="post-image"
+              className="imagep"
             />
           ))}
         </div>
-        <div className="post-info">
-          <h3>title: {post.title}</h3>
-          <p>category: {post.category}</p>
-          <p>description: {post.description}</p>
+        <div className="info">
+          <div className="lefti">
+          <h3>title: {post.title}</h3> <br />
+          <p>category: {post.category}</p> <br />
+          <p>description: {post.description}</p> <br />
           <p>price: ₹ {post.price}</p>
+          </div>
+          <div className="righti">
           <p>
             <strong>Date:</strong> {post.date}
           </p>
+          <br />
           <p>
             <strong>Time:</strong> {post.time}
           </p>
+          </div>
         </div>
-      </div>
-      <div className="post-actions">
-        <button onClick={() => navigate(`/editPost/${id}`)}>Edit</button>
-        <button className="db" onClick={deletePost}>Delete</button>
       </div>
     </div>
   );
