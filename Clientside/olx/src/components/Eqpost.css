@@ -1,0 +1,54 @@
+.enquiry-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #490505;
+      font-size: 27px;
+    }
+  
+    .form8-group {
+      margin-bottom: 15px;
+  
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #be5353;
+      }
+  
+      textarea,
+      input {
+        width: 450px;
+        height: 40px;
+       outline: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+  
+      textarea {
+        resize: vertical;
+        height: 100px;
+      }
+    }
+  
+    .subm {
+      width: 100px;
+      margin-left: 170px;
+      padding: 10px;
+      color: #fcf7f7;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: seagreen;
+    }
