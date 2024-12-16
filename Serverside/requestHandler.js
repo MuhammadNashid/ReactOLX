@@ -210,3 +210,39 @@ export async function deletePost(req, res) {
     res.status(500).send({ msg: "Failed to delete post. Try again later." });
   }
 }
+
+export async function enqPost(req, res) {
+  try {
+    // console.log(req.body);
+    const {sellerId,description,productId,negprice}=req.body
+    const post = await enqSchema.create({buyerId: req.user.UserID, sellerId, description, productId, negprice });
+    res.status(201).send({ msg: "Enquiry send successfully!", data: post })
+  } catch (error) {
+    console.error(error)
+    res.status(500).send({ msg: "Failed to send message. Please try again." })
+  }
+}
+
+export async function enquirees(req, res) {
+  try {
+    const enqs = await enqSchema.find({ sellerId: req.user.UserID });
+    const enrichedEnquiries = await Promise.all(
+      enqs.map(async (enquiry) => {
+        const buyer = await userSchema.findOne({ _id: enquiry.buyerId });
+        const product = await postSchema.findOne({ _id: enquiry.productId });
+
+        return {
+          buyer: buyer.username,
+          product: product.title,
+          description: enquiry.description,
+          negprice: enquiry.negprice,
+        };
+      })
+    );
+
+    res.status(200).send(enrichedEnquiries);
+  } catch (error) {
+    console.error("Error fetching enquiries:", error);
+    res.status(500).send({ msg: "Failed to fetch enquiries. Please try again." });
+  }
+}
